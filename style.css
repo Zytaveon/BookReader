@@ -1,0 +1,25 @@
+#title{
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+}
+
+#headerButtons{
+    text-align: center;
+    border: 100px;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px;
+}
+
+.column{
+    float: left;
+    width: 50%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
