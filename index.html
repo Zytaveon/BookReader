@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,53 +9,47 @@
 </head>
 
 <header>
-    <h1>
-        <span id = "title">
-             Book Reader - Dakota McMann
-        </span>
-    </h1>
-    <!-- <div id = "headerButtons">
-        <button>
-            <a href = "wordCounter.html"> Word Counter </a>
-        </button>
-        <button>
-            <a href = "letterCounter.html"> Letter Counter </a>
-        </button>
-    </div> -->
+    <span class = "title">
+        Book Reader - Dakota McMann
+    </span>
 </header>
+<body>
+    <h1>
+        <div class = "container">
 
-<h1>
+            <div class = "left_column">
 
-    <div class = "container">
+                <button id = "wordCounter">
+                    <a href = "wordCounter.html"> Word Counter </a>
+                </button>
 
-        <div class = "left_column">
-            <button id = "wordCounter">
-                <a href = "wordCounter.html"> Word Counter </a>
-            </button>
-
-            <div class = "columnBody">
+                <div class = "columnBody">
                 Will take a text input from user
                 and will return the five most used words
                 from the given text
+                </div>
+
             </div>
+
+            <div class = "right_column">
+
+                <button id = "letterCounter">
+                    <a href = "letterCounter.html"> Letter Counter </a>
+                </button>
+
+                <div class = columnBody>
+                    Will take an text input from the user
+                    and return the five most used letters from
+                    the given text
+                </div>
+
+            </div>
+
         </div>
 
-        <div class = "right_column">
-            <button id = "letterCounter">
-                <a href = "letterCounter.html"> Letter Counter </a>
-            </button>
+    </h1>
 
-            <div class = columnBody>
-                Will take an text input from the user
-                and return the five most used letters from
-                the given text
-            </div>
-        </div>
-
-    </div>
-
-</h1>
-<body>
-    <script src = "index.js"></script>
+        <script src = "index.js"></script>
 </body>
+
 </html>
