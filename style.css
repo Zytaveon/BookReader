@@ -1,8 +1,13 @@
+header{
+    text-align: center;
+}
+
 #title{
     text-align: center;
     color: white;
     background-color: black;
-    border-radius: 15px;
+    border-radius: 25px;
+    padding: 1ex;
 }
 
 #headerButtons{
@@ -13,13 +18,40 @@
     padding: 10px;
 }
 
-.column{
-    float: left;
-    width: 50%;
+
+.container{
+    display: flex;
+    column-width: auto;
+    height:840px;
 }
 
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
+.left_column{
+    flex: 1;
+    text-align: center;
+    background-color: orange;
 }
+
+.right_column{
+    flex: 1;
+    text-align: center;
+    background-color: blue;
+}
+
+#wordCounter{
+    font-size: large;
+    padding: 20px;
+    padding-right: 20%;
+    padding-left: 20%;
+    margin: 10px;
+    background-color: yellowgreen;
+}
+
+#letterCounter{
+    font-size: large;
+    padding: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 10px;
+    background-color: rgb(226, 43, 198);
+}
+
