@@ -14,14 +14,27 @@
         </span>
         <span class = "backToIndex">
             <button class = "backToIndexButton">
-                Home Page
+                <a href = "index.html"> Home Page </a>
             </button>
         </span>
     </header>
 
     <body>
+        <div class = "inputDescriptionSpan">
+            Input Text Down Below <br>
+            When finished, press submit <br>
+            The 5 most used words will be displayed down below <br>
+        </div>
         <div class = "inputText">
             <textarea placeholder="Insert Text Here" id = "userInput"></textarea>
         </div>
+        <div class = "inputDescriptionSpan">
+            <input class = "displayText" id="displayWord" readonly> <br>
+            <button onclick="wordCounter()" class = "submitButton" id = "wordSubmitButton">
+                Submit
+            </button>
+        </div>
+
+        <script src = "word.js"></script>
     </body>
 </html>

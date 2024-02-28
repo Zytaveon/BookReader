@@ -78,11 +78,38 @@ header{
 }
 
 .inputText{
-    text-align: center;
-    
-    
+    text-align: center; 
+    margin: 20px;
 }
 
-input[type = "text"] {
-    width: 1000px;
+.inputDescription{
+    text-align: center;
+    font-size: x-large;
+    margin: 5px;
+
 }
+
+.inputDescriptionSpan{
+    text-align: center;
+    margin: 5px;
+    font-size: larger;
+}
+
+.submitButton{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.displayText{
+    font-size: large;
+    text-align: center;
+    width: 80%;
+    border: none;
+    color: purple;
+}
+
+
+
