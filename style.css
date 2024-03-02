@@ -111,5 +111,22 @@ header{
     color: purple;
 }
 
+#homePage{
+    text-align: center;
+    color: purple;
+    margin:20px;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: red;
+    background-color: blue;
+    cursor: pointer;
+
+}
+
+#homePageSpan{
+    text-align:center;
+
+}
+
 
 

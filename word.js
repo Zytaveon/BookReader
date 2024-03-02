@@ -47,13 +47,11 @@ function wordCounter(){
         console.log(array[i][0]);
     }
 
-    console.log(displayOutput);
+    //console.log(displayOutput);
 
     outputLine.value = displayOutput;
 
     //console.log(array);
-    
-
     
     //console.log(newWord + " occured " + wordMap.get(newWord) + " times");
 
