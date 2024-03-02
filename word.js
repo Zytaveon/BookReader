@@ -9,21 +9,55 @@ function wordCounter(){
     let newWord;
     let restWords = new String(input);
 
+    const wordMap = new Map();
+
+    let currentVal;
+    let displayOutput = "";
+
     //This while loop works
     while(!restWords == ""){
 
        newWord = getNewWord(restWords);
        restWords = getRestWords(restWords);
 
-        console.log(newWord);
-        console.log(restWords);
+        //console.log(newWord);
+        //console.log(restWords);
+
+        if(wordMap.get(newWord) === undefined){
+            wordMap.set(newWord, 1);
+        }
+
+        else{
+            currentVal = wordMap.get(newWord);
+            wordMap.set(newWord, currentVal + 1);
+        }
+
     }
+
+    let array = [...wordMap.entries()].sort((a, b) => b[1] - a[1]);
+
+    let counter = 5;
+
+    if(array.length < 5){
+        counter = array.length;
+    }
+
+    for(let i = 0; i < counter; ++i){
+        displayOutput = displayOutput  + (i + 1) + ": " + (array[i][0]) + " ";
+        console.log(array[i][0]);
+    }
+
+    console.log(displayOutput);
+
+    outputLine.value = displayOutput;
+
+    //console.log(array);
     
 
     
+    //console.log(newWord + " occured " + wordMap.get(newWord) + " times");
 
-
-    window.alert("We made it past the while");
+    //window.alert("We made it to the end");
 
 }
 
@@ -35,7 +69,7 @@ function getNewWord(listOfWords){
 
     if(restWords.indexOf(" ") === -1){
 
-        if(restWords.indexOf("\n") == -1){
+        if(restWords.indexOf("\n") === -1){
             newWord = restWords;
             return newWord;
         }
@@ -46,7 +80,7 @@ function getNewWord(listOfWords){
         }
     }
 
-    if(restWords.indexOf("\n") == -1){
+    if(restWords.indexOf("\n") === -1){
         newWord = restWords.slice(0, restWords.indexOf(" "));
         return newWord;
     }
@@ -66,8 +100,8 @@ function getRestWords(listOfWords){
     let restWords = new String(listOfWords);
     let newList;
 
-    if(restWords.indexOf(" ") == -1){
-        if(restWords.indexOf("\n") == -1){
+    if(restWords.indexOf(" ") === -1){
+        if(restWords.indexOf("\n") === -1){
             return "";
         }
 
@@ -75,7 +109,7 @@ function getRestWords(listOfWords){
         return newList.trim();
     }
 
-    if(restWords.indexOf("\n") == -1){
+    if(restWords.indexOf("\n") === -1){
         newList = restWords.slice(restWords.indexOf(" ") + 1);
         return newList.trim();
     }
